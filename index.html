@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Login Form</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Ionicons for icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <div class="login-container">
+    <form id="loginForm" aria-label="Login form">
+      <h2>Log in</h2>
+
+      <!-- Email -->
+      <div class="input-box">
+        <label for="email">Email</label>
+        <div class="input-field">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required aria-required="true">
+        </div>
+        <small class="error" id="emailError"></small>
+      </div>
+
+      <!-- Password -->
+      <div class="input-box">
+        <label for="password">Password</label>
+        <div class="input-field">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required aria-required="true" minlength="6">
+        </div>
+        <small class="error" id="passwordError"></small>
+      </div>
+
+      <button type="submit">Login</button>
+
+      <p class="help-text">Forgot your password? <a href="#">Click here</a></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
